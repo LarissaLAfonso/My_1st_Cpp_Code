@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <cmath>
+#include <iostream>
 
 /**
- * Recebe 
+ * Recebe a massa a e a altura e classifica o IMC.
 */
 int classificaIMC(int massa, float altura){
     float imc = massa / pow(altura, 2);
@@ -33,7 +34,16 @@ int classificaIMC(int massa, float altura){
 }
 
 int main(){
-    classificaIMC(56, 1.6);
+    int massa;
+    float altura;
+
+    std::cout << "Escreva sua massa em quilos.\n";
+    std::cin >> massa;
+
+    std::cout << "Escreva sua altura em metros.\n";
+    std::cin >> altura;
+
+    classificaIMC(massa, altura);
 
     return 0;
 }
